@@ -1,5 +1,6 @@
 mount -t proc proc /proc
-echo "deb-src http://ftp.us.debian.org/debian stable main" >> /etc/apt/sources.list
+echo "deb     http://ftp.au.debian.org/debian stable main" > /etc/apt/sources.list
+echo "deb-src http://ftp.au.debian.org/debian stable main" >> /etc/apt/sources.list
 apt-get update
 apt-get -y install build-essential ghc git libncurses5-dev cabal-install
 apt-get -y install llvm-3.0 # not 3.1; buggy on arm. 3.2 is ok too
